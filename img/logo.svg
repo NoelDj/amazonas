@@ -1,0 +1,30 @@
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="181" height="38.302" viewBox="0 0 181 38.302">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H37.926V37.926H0Z" transform="translate(0.768 0.376)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Clip_5" data-name="Clip 5" d="M0,0H36.478V37.167H0Z" transform="translate(0 0.755)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Clip_7" data-name="Clip 7" d="M0,38H181V0H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_3" data-name="Group 3" transform="translate(36)">
+    <path id="Clip_2-2" data-name="Clip 2" d="M0,0H37.926V37.926H0Z" transform="translate(0.768 0.376)" fill="none"/>
+    <g id="Group_3-2" data-name="Group 3" clip-path="url(#clip-path)">
+      <path id="Fill_1" data-name="Fill 1" d="M37.926,37.927H0V0H37.926V37.926ZM18.963.38A18.583,18.583,0,1,0,37.546,18.963,18.6,18.6,0,0,0,18.963.38Z" transform="translate(0.768 0.376)" fill="#f39945"/>
+    </g>
+  </g>
+  <g id="Group_6" data-name="Group 6">
+    <path id="Clip_5-2" data-name="Clip 5" d="M0,0H36.478V37.167H0Z" transform="translate(0 0.755)" fill="none"/>
+    <g id="Group_6-2" data-name="Group 6" clip-path="url(#clip-path-2)">
+      <path id="Fill_4" data-name="Fill 4" d="M18.24,0A18.414,18.414,0,0,0,0,18.583,18.414,18.414,0,0,0,18.24,37.167,18.413,18.413,0,0,0,36.478,18.583,18.413,18.413,0,0,0,18.24,0" transform="translate(-0.001 0.755)" fill="#f39945"/>
+    </g>
+  </g>
+  <path id="Clip_7-2" data-name="Clip 7" d="M0,38H181V0H0Z" fill="none"/>
+  <g id="Mask_Group_9" data-name="Mask Group 9" clip-path="url(#clip-path-3)">
+    <text id="Akademiker" transform="translate(84 5)" fill="#020303" font-size="13.17" font-family="SegoeUI, Segoe UI" letter-spacing="0.002em"><tspan x="0" y="14">Akademi</tspan><tspan y="14" letter-spacing="-0.028em">k</tspan><tspan y="14">er</tspan></text>
+    <text id="Pension" transform="translate(84 21)" fill="#020303" font-size="13.17" font-family="SegoeUI, Segoe UI" letter-spacing="-0.013em"><tspan x="0" y="14">P</tspan><tspan y="14" letter-spacing="0.002em">ension</tspan></text>
+  </g>
+</svg>

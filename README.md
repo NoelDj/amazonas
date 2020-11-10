@@ -1,2 +1,2 @@
 # amazonas
-Amazonas' website solution for the pension plan websirte
+Amazonas' website solution for the pension plan website.
