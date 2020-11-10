@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +14,8 @@
 html,
 body {
     height: 100%;
+    font-family: "Open Sans";
+    overflow: hidden;
 }
 
 
@@ -19,6 +23,7 @@ main {
     background: #DCDCDC;
     position: relative;
 }
+
 /*Akademiker pension's header*/
 
 header {
@@ -49,7 +54,7 @@ nav img:nth-child(4) {
 
 .leaves:nth-child(2) {
     position: absolute;
-    top: 74%;
+    top: 73.1%;
     left: 0;
     transform: rotate(0);
 }
@@ -60,6 +65,49 @@ section {
 
 .calculator {
     background-color: white;
+}
+
+
+/*calculator*/
+
+input {
+    display: block;
+}
+
+/*aside menu*/
+
+aside {
+    background: #386082;
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    right: 0;
+    transition: 2s ease-out;
+    opacity: 8;
+    z-index: 3;
+    padding: 40px;
+    transform: translateX(100%);
+}
+
+.show {
+    transform: translateX(0);
+}
+
+
+
+.inside {
+    border: 2px black;
+    height: 200px;
+    background: #218169;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inside h3 {
+    font-size: 26px;
+    color: white;
 }
 
 /*Desktop View*/
@@ -139,7 +187,6 @@ section {
         display: grid;
         grid-template-columns: 1fr 80vw 1fr;
         grid-template-rows: 20vw 1fr;
-        overflow: auto;
 
     }
 
@@ -167,6 +214,10 @@ section {
         grid-column: 1/2;
         border-radius: 5%;
     }
+
+    aside {
+        width: 100%;
+    }
 }
 
 .card {
@@ -174,6 +225,7 @@ section {
     border-radius: 0%;
     padding: 10px;
     transition: 1s;
+    cursor: pointer;
 }
 
 .card .content {
@@ -190,21 +242,5 @@ section {
 .card:hover {
     transform: scale(1.1);
     transition: 1s;
-}
-
-/*calculator*/
-
-input {
-    display: block;
-}
-
-aside {
-    background: orange;
-    height: 100%;
-    width: 40%;
-    position: absolute;
-    right: 0;
-    display: block;
-    transition: 1s;
-    opacity: .8;
+    z-index: 2;
 }

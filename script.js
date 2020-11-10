@@ -1,19 +1,19 @@
-window.addEventListener("DOMContentLoaded", function(e){
-     fetch("http://aguacate.dk/pension_data/wp-json/wp/v2/categories")
-    .then(res => res.json())
-    .then(showCategory)
+window.addEventListener("DOMContentLoaded", function (e) {
+    fetch("http://aguacate.dk/pension_data/wp-json/wp/v2/categories")
+        .then(res => res.json())
+        .then(showCategory)
 })
 
 function showCategory(cat) {
     /*document.querySelector(".category").textContent = cat.name;*/
 
-  cat.forEach(showPost)
+    cat.forEach(showPost)
 
 
 
 }
 
-function showPost(post){
+function showPost(post) {
     console.log(post.name)
 
     const template = document.querySelector("template").content;
@@ -23,11 +23,10 @@ function showPost(post){
 
     document.querySelector(".categories").appendChild(copy);
 
-    const x = document.querySelector(".toggle").addEventListener("click", function(e){
-        console.log("hi")
-    })
-    console.log(x);
+    document.querySelector("article").addEventListener("click", function (e) {
+        const asidebar = document.querySelector('aside');
+            asidebar.classList.toggle("show")
 
+    })
 
 }
-

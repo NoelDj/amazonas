@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --tileColor: rgb(189, 192, 165);
+    --white: rgb(255, 255, 255);
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Open Sans";
+    overflow: hidden;
+    background-color: #386082;
+}
+
+
+main {
+    background: #386082;
+    position: relative;
+}
+
+/*Akademiker pension's header*/
+
+header {
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > img {
+    cursor: pointer;
+    width: 25px;
+    margin-right: 20px;
+}
+
+nav img:nth-child(4) {
+    margin-right: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.all {
+    background: white;
+    border-radius: 60px;
+    padding: 80px;
+    color: #386082;
+
+}
+
+.all ul {
+    list-style: none;
+}
+
+.information {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-left: none;
+    border-radius: 0px 50px 40px 30px;
+}
+
+@media screen and (orientation: landscape) {
+
+   body {
+        width: 100%;
+        display: grid;
+        grid-template-rows: clamp(60px, 7vw, 90px) 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        padding: 0 10%;
+    }
+
+
+}
+
+@media screen and (orientation: portrait) {
+
+    body {
+        width: 100%;
+        display: grid;
+        grid-template-rows: clamp(40px, 7vh, 60px) 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        /* overflow: hidden; */
+    }
+
+    header {
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        padding: 0 2%;
+    }
+}
+
