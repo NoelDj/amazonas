@@ -197,3 +197,14 @@ section {
 input {
     display: block;
 }
+
+aside {
+    background: orange;
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    right: 0;
+    display: block;
+    transition: 1s;
+    opacity: .8;
+}

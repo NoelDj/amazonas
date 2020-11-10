@@ -23,4 +23,11 @@ function showPost(post){
 
     document.querySelector(".categories").appendChild(copy);
 
+    const x = document.querySelector(".toggle").addEventListener("click", function(e){
+        console.log("hi")
+    })
+    console.log(x);
+
+
 }
+
