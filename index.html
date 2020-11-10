@@ -6,31 +6,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-   <header>
+    <header>
         <div class="logo">
             <img src="img/logo.svg" alt="Akademiker Pension Logo">
         </div>
-       <nav class="nav">
-           <img src="img/search.svg" alt="">
-           <img src="img/phone.svg" alt="">
-           <img src="img/login.svg" alt="">
-           <img src="img/menu.svg" alt="">
-       </nav>
-   </header>
+        <nav class="nav">
+            <img src="img/search.svg" alt="">
+            <img src="img/phone.svg" alt="">
+            <img src="img/login.svg" alt="">
+            <img src="img/menu.svg" alt="">
+        </nav>
+    </header>
 
     <main>
         <section class="all">
             <section class="calculator">
+            <div class="container">
+                <img src="img/customer.svg" alt="">
+                <h2>Calculate your pension <span><img src="img/arrow-down.svg" alt=""></span></h2>
+                <form action="">
+                    <label for="">Monthly Income</label>
 
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
+                    <label for="">Commision Rate</label>
+                    <input type="range" min="1" max="10" value="50" class="slider" id="myRange">
+
+                    <div class="calc-buttom">
+                        <label for="">Your Age</label>
+                        <input type="text">
+                        <label for="">Retirement Age</label>
+                        <input type="text">
+                        <img src="img/credit-card.svg" alt="">
+
+                    </div>
+                    <button>Adjust your plan</button>
+
+                </form>
+            </div>
             </section>
             <section class="categories">
-                <div class="card my-pension"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+               <template>
+                   <article class="card">
+                    <div class="content">
+                        <img src="svg-for-cards/hand.svg" alt="">
+                        <h3 class="category">Pension Plan</h3>
+                        <img src="svg-for-cards/arrow.svg" alt="">
+                    </div>
+                </article>
+               </template>
             </section>
         </section>
         <img src="img/leaves.svg" alt="" class="leaves" id="leaves-one">
@@ -39,5 +65,4 @@
 
     <script src="script.js"></script>
 
-</body>
-</html>
+</body></html>
