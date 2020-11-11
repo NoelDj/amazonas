@@ -25,7 +25,7 @@ function showPost(post) {
         const asidebar = document.querySelector('aside');
         asidebar.classList.toggle("show")
 
-        document.querySelector("#aside-name").textContent = post.name;
+        /*document.querySelector("#aside-name").textContent = post.name;*/
 
         /*populating the template with items*/
 
@@ -52,12 +52,7 @@ function showPost(post) {
             if (cat_id == e.categories[0]) {
                 document.querySelector("aside").appendChild(clone);
             }
-
         }
-
-
-
-
     })
 
     document.querySelector(".categories").appendChild(copy);
