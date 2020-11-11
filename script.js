@@ -31,7 +31,6 @@ function showPost(post) {
 
 
         const cat_id = post.id;
-        console.log(cat_id);
 
 
         fetch("http://aguacate.dk/pension_data/wp-json/wp/v2/pension?_embed")
@@ -39,7 +38,6 @@ function showPost(post) {
             .then(handleData)
 
         function handleData(a) {
-            console.log(a);
             a.forEach(showItem)
         }
 
@@ -49,10 +47,17 @@ function showPost(post) {
             const clone = templateAside.cloneNode(true);
             clone.querySelector("h3").textContent = e.title.rendered;
 
+            const a = clone.querySelector("a");
+            a.href += e.id;
+
             if (cat_id == e.categories[0]) {
                 document.querySelector("aside").appendChild(clone);
             }
+
+
         }
+
+
     })
 
     document.querySelector(".categories").appendChild(copy);
