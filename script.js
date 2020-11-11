@@ -5,7 +5,6 @@ window.addEventListener("DOMContentLoaded", function (e) {
 })
 
 function showCategory(cat) {
-    /*document.querySelector(".category").textContent = cat.name;*/
 
     cat.forEach(showPost)
 
@@ -14,19 +13,67 @@ function showCategory(cat) {
 }
 
 function showPost(post) {
-    console.log(post.name)
 
     const template = document.querySelector("template").content;
     const copy = template.cloneNode(true);
 
+    const card = copy.querySelector("article");
+
     copy.querySelector("h3").textContent = post.name;
 
-    document.querySelector(".categories").appendChild(copy);
-
-    document.querySelector("article").addEventListener("click", function (e) {
+    card.addEventListener("click", function (e) {
         const asidebar = document.querySelector('aside');
-            asidebar.classList.toggle("show")
+        asidebar.classList.toggle("show")
+
+        document.querySelector("#aside-name").textContent = post.name;
+
+        /*populating the template with items*/
+
+
+        const cat_id = post.id;
+        console.log(cat_id);
+
+
+        fetch("http://aguacate.dk/pension_data/wp-json/wp/v2/pension?_embed")
+            .then(res => res.json())
+            .then(handleData)
+
+        function handleData(a) {
+            console.log(a);
+            a.forEach(showItem)
+        }
+
+        function showItem(e) {
+
+            const templateAside = document.querySelector("#aside-template").content;
+            const clone = templateAside.cloneNode(true);
+            clone.querySelector("h3").textContent = e.title.rendered;
+
+            if (cat_id == e.categories[0]) {
+                document.querySelector("aside").appendChild(clone);
+            }
+
+        }
+
+
+
 
     })
 
+    document.querySelector(".categories").appendChild(copy);
+
+
+
 }
+
+
+
+
+
+
+
+/*card.disabled = true;
+
+       setTimeout(function(){
+           card.disabled = false;
+       }, 2000);*/
