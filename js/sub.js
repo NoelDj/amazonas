@@ -24,6 +24,7 @@ function showPost(post) {
     const copy = template.cloneNode(true)*/;
 
     document.querySelector("h2").textContent = post.title.rendered;
+    document.querySelector("p").innerHTML = post.content.rendered;
 
     /*const a = copy.querySelector("a");
     a.href += post.id;*/

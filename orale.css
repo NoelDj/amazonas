@@ -15,7 +15,6 @@ html,
 body {
     height: 100%;
     font-family: "Open Sans";
-    overflow: hidden;
     background-color: #386082;
 }
 
@@ -52,6 +51,8 @@ main {
 }
 
 .all {
+    margin-top: 100px;
+    margin-bottom: 100px;
     background: white;
     border-radius: 60px;
     padding: 80px;
