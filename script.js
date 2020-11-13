@@ -62,8 +62,6 @@ function showPost(post) {
 
     document.querySelector(".categories").appendChild(copy);
 
-
-
 }
 
 
