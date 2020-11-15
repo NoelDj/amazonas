@@ -79,7 +79,7 @@ input {
 aside {
     background: #386082;
     height: 100%;
-    width: 45%;
+    width: 100%;
     position: absolute;
     right: 0;
     transition: 1s ease-out;
@@ -111,6 +111,12 @@ aside {
     color: white;
 }
 
+
+h5 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 50px;
+}
 
 /*Desktop View*/
 
@@ -218,7 +224,7 @@ aside {
     }
 
     aside {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -259,6 +265,7 @@ aside {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    cursor: pointer;
 }
 .close::before{
     content: "";

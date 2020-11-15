@@ -8,6 +8,8 @@ function showCategory(cat) {
 
     cat.forEach(showPost)
 
+
+
 }
 
 function showPost(post) {
@@ -17,20 +19,22 @@ function showPost(post) {
 
     const card = copy.querySelector("article");
 
+
+
     copy.querySelector("h3").textContent = post.name;
+    const asidebar = document.querySelector('aside');
 
 
 
     card.addEventListener("click", function (e) {
-        const asidebar = document.querySelector('aside');
-        asidebar.classList.toggle("show")
+        asidebar.classList.add("show");
 
         /*document.querySelector("#aside-name").textContent = post.name;*/
 
         /*populating the template with items*/
 
-
         const cat_id = post.id;
+        document.querySelector("h5").textContent = post.name;
 
 
         fetch("http://aguacate.dk/pension_data/wp-json/wp/v2/pension?_embed")
@@ -47,6 +51,8 @@ function showPost(post) {
 
             const templateAside = document.querySelector("#aside-template").content;
             const clone = templateAside.cloneNode(true);
+
+
             clone.querySelector("h3").textContent = e.title.rendered;
 
             const a = clone.querySelector("a");
@@ -54,43 +60,21 @@ function showPost(post) {
 
             if (cat_id == e.categories[0]) {
                 document.querySelector("aside").appendChild(clone);
-
             }
-
-
-
-
-
-
-
-
-
         }
-
-
-
-
-
-
-
-
-
-
     })
 
     document.querySelector(".categories").appendChild(copy);
 
+    document.querySelector(".close").addEventListener("click", e => {
+        asidebar.addEventListener("transitionend", remove);
+        asidebar.classList.remove("show");
+    })
 
+    function remove(){
+        asidebar.removeEventListener("transitionend", remove);
+        document.querySelectorAll("#read-more").forEach(rm => {
+            rm.remove();
+        })
+    }
 }
-
-
-
-
-
-
-
-/*card.disabled = true;
-
-       setTimeout(function(){
-           card.disabled = false;
-       }, 2000);*/
