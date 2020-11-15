@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function (e) {
-    fetch("http://aguacate.dk/pension_data/wp-json/wp/v2/categories")
+    fetch("https://aguacate.dk/pension_data/wp-json/wp/v2/categories")
         .then(res => res.json())
         .then(showCategory)
 })
@@ -37,7 +37,7 @@ function showPost(post) {
         document.querySelector("h5").textContent = post.name;
 
 
-        fetch("http://aguacate.dk/pension_data/wp-json/wp/v2/pension?_embed")
+        fetch("https://aguacate.dk/pension_data/wp-json/wp/v2/pension?_embed")
             .then(res => res.json())
             .then(handleData)
 

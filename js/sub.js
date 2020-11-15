@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", getData)
 /*http://aguacate.dk/pension_data/wp-json/wp/v2/categories*/
-const datalink = "http://aguacate.dk/pension_data/wp-json/wp/v2/pension?_embed";
+const datalink = "https://aguacate.dk/pension_data/wp-json/wp/v2/pension?_embed";
 
 function getData() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -8,7 +8,7 @@ function getData() {
     console.log(house_id)
 
     if (house_id) {
-        fetch("http://aguacate.dk/pension_data/wp-json/wp/v2/pension/" + house_id + "?_embed")
+        fetch("https://aguacate.dk/pension_data/wp-json/wp/v2/pension/" + house_id + "?_embed")
             .then(res => res.json())
             .then(showPost)
     } /*else if (!house_id && window.location.pathname == "/subpage.html") {
