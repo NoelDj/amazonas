@@ -20,15 +20,14 @@ function showPost(post) {
     const card = copy.querySelector("article");
 
     copy.querySelector("h3").textContent = post.name;
+    const asidebar = document.querySelector('aside');
 
     card.addEventListener("click", function (e) {
-        const asidebar = document.querySelector('aside');
-        asidebar.classList.toggle("show")
+        asidebar.classList.add("show");
 
         /*document.querySelector("#aside-name").textContent = post.name;*/
 
         /*populating the template with items*/
-
 
         const cat_id = post.id;
 
@@ -56,11 +55,23 @@ function showPost(post) {
 
 
         }
-
+        
 
     })
-
+    
     document.querySelector(".categories").appendChild(copy);
+
+    document.querySelector(".close").addEventListener("click", e => {
+        asidebar.addEventListener("transitionend", remove);
+        asidebar.classList.remove("show");
+    })
+
+    function remove(){
+        asidebar.removeEventListener("transitionend", remove);
+        document.querySelectorAll("#read-more").forEach(rm => {
+            rm.remove();
+        })
+    }
 
 }
 
