@@ -21,6 +21,8 @@ function showPost(post) {
 
     copy.querySelector("h3").textContent = post.name;
 
+
+
     card.addEventListener("click", function (e) {
         const asidebar = document.querySelector('aside');
         asidebar.classList.toggle("show")
@@ -39,6 +41,8 @@ function showPost(post) {
 
         function handleData(a) {
             a.forEach(showItem)
+
+
         }
 
         function showItem(e) {
@@ -52,15 +56,32 @@ function showPost(post) {
 
             if (cat_id == e.categories[0]) {
                 document.querySelector("aside").appendChild(clone);
+
             }
+
+
+
+
+
+
+
 
 
         }
 
 
+
+
+
+
+
+
+
+
     })
 
     document.querySelector(".categories").appendChild(copy);
+
 
 }
 
