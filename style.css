@@ -223,7 +223,7 @@ aside {
 }
 
 .card {
-    background-color: rgb(179, 179, 179);
+    background-color:#386082;
     border-radius: 5%;
     padding: 10px;
     transition: .2s;
