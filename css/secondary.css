@@ -83,6 +83,16 @@ main {
     border-radius: 0px 50px 40px 30px;
 }
 
+h1 {
+    margin-bottom: 50px;
+    font-size: 26px;
+}
+
+h4, h5 {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
 @media screen and (orientation: landscape) {
 
    body {
@@ -101,21 +111,4 @@ main {
 
 }
 
-@media screen and (orientation: portrait) {
-
-    body {
-        width: 100%;
-        display: grid;
-        grid-template-rows: clamp(40px, 7vh, 60px) 1fr;
-        grid-template-columns: 1fr 1fr;
-
-        /* overflow: hidden; */
-    }
-
-    header {
-        grid-row: 1/2;
-        grid-column: 1/-1;
-        padding: 0 2%;
-    }
-}
 
