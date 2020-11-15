@@ -65,13 +65,54 @@ section {
 
 .calculator {
     background-color: white;
+    text-align: center;
 }
 
+.container > * {
+    margin-bottom: 30px;
+}
+
+.container button {
+    width: 65%;
+    border: 1px solid;
+    padding: 20px 0;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+    background: orange;
+    cursor: pointer;
+}
+
+.form-card {
+    position: relative;
+}
+
+.form-card p {
+    position: absolute;
+    color: white;
+}
+
+#outcome {
+    top: 20%;
+    left: 30%;
+    font-size: 14px;
+}
+
+#month {
+    top: 40%;
+    left: 30%;
+    font-size: 20px;
+}
 
 /*calculator*/
 
 input {
+    width: 80%;
     display: block;
+}
+
+.container img {
+    margin-top: 20px;
 }
 
 /*aside menu*/
