@@ -223,15 +223,17 @@ aside {
 }
 
 .card {
-    background-color: #FF9632;
-    border-radius: 0%;
+    background-color:#386082;
+    border-radius: 5%;
     padding: 10px;
-    transition: 1s;
+    transition: .2s;
     cursor: pointer;
+    transition-timing-function: ease-in-out;
 }
 
 .card .content {
-    border: 2px solid white;
+    /* border: 2px solid rgba(0, 0, 0, 0.733); */
+    border-radius: 3%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -239,11 +241,52 @@ aside {
     justify-content: space-between;
     flex-direction: column;
     padding: 20px;
+    color: white;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    transition: .3s;
-    transition-timing-function: ease-out;
+    transform: translateY(-7px);
+    transition: .2s;
+    transition-timing-function: ease-in-out;
     z-index: 2;
+}
+
+.close{
+    width: 40px;
+    padding-bottom: 40px;
+    /* background-color: tomato; */
+    transform: translate(-100%, -100%);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+.close::before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    width: 7%;
+    background-color: white;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+}
+.cross{
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    width: 7%;
+    background-color: white;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+}
+.close:hover .cross{
+    transform: translate(-50%, -50%) rotate(55deg)
+}
+
+.close:hover::before{
+    transform: translate(-50%, -50%) rotate(-55deg);
 }
