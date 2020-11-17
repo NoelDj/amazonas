@@ -129,6 +129,13 @@ aside {
     padding: 40px;
     transform: translateX(100%);
     overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.close, aside h5 {
+grid-column: 1/-1;
 }
 
 .show {
@@ -139,7 +146,7 @@ aside {
 
 .inside {
     border: 2px black;
-    height: 200px;
+    height: 80px;
     background: #218169;
     margin-bottom: 50px;
     display: flex;
@@ -264,9 +271,7 @@ h5 {
         border-radius: 5%;
     }
 
-    aside {
-        width: 100%;
-    }
+
 }
 
 .card {
@@ -345,5 +350,6 @@ a {
 
 .logo p {
     margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 10px;
 }
