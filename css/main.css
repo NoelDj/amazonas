@@ -75,7 +75,7 @@ section {
 .container button {
     width: 65%;
     border: 1px solid;
-    padding: 20px 0;
+    padding: 10px 0;
     border-radius: 50px;
     font-size: 20px;
     color: white;
@@ -337,4 +337,8 @@ h5 {
 
 .close:hover::before{
     transform: translate(-50%, -50%) rotate(-55deg);
+}
+
+a {
+    text-decoration: none;
 }
