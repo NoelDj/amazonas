@@ -147,4 +147,8 @@ footer a:nth-child(2){
     margin-top: 50px;
 }
 
+.logo p {
+    margin-top: 10px;
+    font-size: 10px;
+}
 

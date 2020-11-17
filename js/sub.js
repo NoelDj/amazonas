@@ -25,6 +25,7 @@ function showPost(post) {
 
     document.querySelector("h1").textContent = post.title.rendered;
     document.querySelector(".data-text").innerHTML = post.content.rendered;
+    document.querySelector(".slug").textContent = post.title.rendered;
 
     /*const a = copy.querySelector("a");
     a.href += post.id;*/

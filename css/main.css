@@ -342,3 +342,8 @@ h5 {
 a {
     text-decoration: none;
 }
+
+.logo p {
+    margin-top: 10px;
+    font-size: 10px;
+}
