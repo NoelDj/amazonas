@@ -28,7 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 3px 2px 78px -34px rgba(0,0,0,0.63);
+    box-shadow: 3px 2px 178px -34px rgba(0,0,0,1);
 }
 
 nav > img {
@@ -157,3 +157,4 @@ article a {
     text-decoration: none;
     color: #386082;
 }
+
