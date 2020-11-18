@@ -43,8 +43,6 @@ function showPost(post) {
 
         function handleData(a) {
             a.forEach(showItem)
-
-
         }
 
         function showItem(e) {
@@ -73,7 +71,7 @@ function showPost(post) {
 
     function remove(){
         asidebar.removeEventListener("transitionend", remove);
-        document.querySelectorAll("#read-more").forEach(rm => {
+        document.querySelectorAll(".inside").forEach(rm => {
             rm.remove();
         })
     }

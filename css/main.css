@@ -19,7 +19,6 @@ body {
 
 
 main {
-    background: #DCDCDC;
     position: relative;
     overflow: hidden;
 }
@@ -43,29 +42,14 @@ nav img:nth-child(4) {
     margin-right: 0;
 }
 
-/*Picture and svgs*/
-.leaves {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: rotate(180deg);
-    z-index: 4;
-}
-
-.leaves:nth-child(2) {
-    position: absolute;
-    top: 73.1%;
-    left: 0;
-    transform: rotate(0);
-}
 
 section {
     z-index: 5;
 }
 
 .calculator {
-    background-color: white;
     text-align: center;
+    box-shadow: 3px 2px 78px -34px rgba(0,0,0,0.63);
 }
 
 .container > * {
@@ -75,11 +59,12 @@ section {
 .container button {
     width: 65%;
     border: 1px solid;
-    padding: 10px 0;
+    padding: 12px 0;
+    font-weight:600;
     border-radius: 50px;
-    font-size: 20px;
-    color: white;
-    background: orange;
+    font-size: 16px;
+    color: #386082;
+    background: white;
     cursor: pointer;
 }
 
@@ -93,14 +78,14 @@ section {
 }
 
 #outcome {
-    top: 20%;
-    left: 30%;
+    top: 30%;
+    left: 35%;
     font-size: 14px;
 }
 
 #month {
-    top: 40%;
-    left: 30%;
+    top: 50%;
+    left: 35%;
     font-size: 20px;
 }
 
@@ -127,15 +112,23 @@ aside {
     opacity: 1;
     z-index: 10;
     padding: 40px;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     overflow: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
+    text-align: center;
 }
 
-.close, aside h5 {
+aside h5 {
 grid-column: 1/-1;
+font-size: 25px;
+color: orange;
+margin-bottom: 20px;
+
+}
+
+hr {
+    margin-bottom: 50px;
 }
 
 .show {
@@ -147,11 +140,7 @@ grid-column: 1/-1;
 .inside {
     border: 2px black;
     height: 80px;
-    background: #218169;
     margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .inside h3 {
@@ -159,12 +148,6 @@ grid-column: 1/-1;
     color: white;
 }
 
-
-h5 {
-    font-size: 30px;
-    color: white;
-    margin-bottom: 20px;
-}
 
 /*Desktop View*/
 
@@ -175,13 +158,13 @@ h5 {
         display: grid;
         grid-template-rows: clamp(60px, 7vw, 90px) 1fr;
         grid-template-columns: 1fr;
-        background: #757575;
     }
 
     header {
         grid-row: 1/2;
         grid-column: 1/-1;
         padding: 0 10%;
+        box-shadow: 3px 2px 78px -34px rgba(0,0,0,0.63);
     }
 
     main {
@@ -189,7 +172,7 @@ h5 {
         grid-column: 1/-1;
         display: grid;
         /* clamp = (min, value, max)*/
-        grid-template-columns: 1fr clamp(700px, 80vw, 1200px) 1fr;
+        grid-template-columns: 1fr clamp(700px, 80vw, 1600px) 1fr;
         /* below pieces of code look like the dont work but browsers can read it */
         /* I'm using cals to remain aspect-ratio */
         grid-template-rows: 1fr calc(clamp(700px, 80vw, 1200px)*0.43) 1fr;
@@ -206,7 +189,7 @@ h5 {
     .calculator {
         grid-row: 1/-1;
         grid-column: 1/2;
-        border-radius: 5%;
+        border-radius: 20px 0 20px 0;
     }
 
     .categories {
@@ -268,7 +251,7 @@ h5 {
     .calculator {
         grid-row: 3/4;
         grid-column: 1/2;
-        border-radius: 5%;
+        border-radius: 20px 0 20px 0;
     }
 
 
@@ -276,11 +259,12 @@ h5 {
 
 .card {
     background-color:#386082;
-    border-radius: 5%;
+    border-radius: 20px 0 20px 0;
     padding: 10px;
     transition: .2s;
     cursor: pointer;
     transition-timing-function: ease-in-out;
+    box-shadow: 3px 2px 78px -34px rgba(0,0,0,0.33);
 }
 
 .card .content {
@@ -304,44 +288,13 @@ h5 {
 }
 
 .close{
-    width: 40px;
-    padding-bottom: 40px;
-    /* background-color: tomato; */
-    transform: translate(-100%, -100%);
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
+    position: absolute;
+    right: 150px;
+    top: 50px;
     cursor: pointer;
-}
-.close::before{
-    content: "";
-    position: absolute;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    top: 50%;
-    left: 50%;
-    height: 80%;
-    width: 7%;
-    background-color: white;
-    transition-timing-function: ease;
-    transition-duration: .2s;
-}
-.cross{
-    position: absolute;
-    transform: translate(-50%, -50%) rotate(45deg);
-    top: 50%;
-    left: 50%;
-    height: 80%;
-    width: 7%;
-    background-color: white;
-    transition-timing-function: ease;
-    transition-duration: .2s;
-}
-.close:hover .cross{
-    transform: translate(-50%, -50%) rotate(55deg)
-}
-
-.close:hover::before{
-    transform: translate(-50%, -50%) rotate(-55deg);
+    font-family: poppins;
+    font-size: 20px;
+    color: orange;
 }
 
 a {

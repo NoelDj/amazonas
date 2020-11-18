@@ -15,7 +15,7 @@ html,
 body {
     min-height: 100vh;
     font-family: "Open Sans";
-    background-color: #386082;
+    background-color: white;
 }
 
 
@@ -28,6 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 3px 2px 78px -34px rgba(0,0,0,0.63);
 }
 
 nav > img {
@@ -46,7 +47,6 @@ nav img:nth-child(4) {
 /*Akademiker article*/
 
 main {
-    background: #386082;
     position: relative;
     display: flex;
     align-items: center;
@@ -56,13 +56,11 @@ main {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    margin-top: 50px;
     
 }
 
 article {
     
-    background: white;
     border-radius: 20px 0 20px 0;
     padding: 100px 150px;
     color: #386082;
@@ -70,7 +68,7 @@ article {
 }
 
 h1 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 26px;
 }
 
@@ -91,15 +89,14 @@ footer {
     background: #413E83;
     height: 200px;
     width: 800px;
-    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     padding: 20px;
     border-radius: 20px 0 20px 0;
     position: relative;
     margin: auto;
-    margin-top: 50px;
     margin-bottom: 50px;
+    box-shadow: 3px 2px 78px -34px rgba(0,0,0,0.63);
 }
 
 strong {
